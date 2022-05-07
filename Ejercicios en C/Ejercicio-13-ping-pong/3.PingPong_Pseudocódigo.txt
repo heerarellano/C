@@ -1,0 +1,20 @@
+Inicio 
+	Variable contador es Numérico Entero
+
+	contador = 0
+
+	Escribir "Programa que imprime los números del 1 al 100,aplicando las siguientes reglas."
+	Escribir "Regla 1: Cuando el número sea divisible entre 3, en vez del número debe escribir "ping" "
+	Escribir "Regla 2: Cuando el número sea divisible entre 5, en vez del número debe escribir \"pong\" "
+	Escribir "Regla 3: Cuando el número sea divisible entre 3 y también divisible entre 5, en vez del número debe escribir \"ping-pong\" "
+
+	for(contador = 1; contador <= 100; contador++)
+		Si(contador % 3 == 0 AND contador % 5 == 0) entonces
+			Escribir "ping-pong"
+		sino (contador % 3 == 0) 
+			Escribir "ping"
+		sino (contador % 5 == 0)
+			Escribir "pong"
+		fin-si
+	end-for
+Fin

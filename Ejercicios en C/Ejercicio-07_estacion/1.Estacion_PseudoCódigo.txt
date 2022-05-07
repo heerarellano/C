@@ -1,0 +1,39 @@
+
+Algoritmo A09Estacion
+Var
+   eMes, eDia: entero
+Inicio
+   Escribir (“Programa que al recibir un número correspondiente al mes y otro correspondiente al día devuelve un mensaje que indica la estación”)
+   Escribir (“Escribir un número que corresponde al mes”)
+   Leer(eMes)
+   Escribir (“Escribir un número que corresponde al Día”)
+   Leer(eDia)
+   Si (eDia < 1 ó eDia > 31) entonces
+      Escribir (“Error Día fuera de rango”)
+   De lo contrario
+      En caso de (eMes) hacer
+         1, 2, 12: Si (eMes = 12 y eDia < 21) entonces
+                           Escribir (“Es Otoño”)
+                        De lo contrario
+                            Escribir (“Es Invierno”)
+                        Fin Si
+         3, 4, 5: Si (eMes = 3 y eDia < 21) entonces
+                           Escribir (“Es Invierno”)
+                        De lo contrario
+                            Escribir (“Es Primavera”)
+                        Fin Si
+         6, 7, 8: Si (eMes = 6 y eDia < 21) entonces
+                           Escribir (“Es Primavera”)
+                        De lo contrario
+                            Escribir (“Es Verano”)
+                        Fin Si
+         9, 10, 11: Si (eMes = 9 y eDia < 21) entonces
+                           Escribir (“Es Verano”)
+                        De lo contrario
+                            Escribir (“Es Otoño”)
+                        Fin Si
+         De lo contrario
+            Escribir(“Error fuera de rango”)
+         Fin en caso de
+      Fin si
+   Fin//A09Estación

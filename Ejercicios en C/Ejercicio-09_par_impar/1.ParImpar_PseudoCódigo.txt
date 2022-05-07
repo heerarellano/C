@@ -1,0 +1,14 @@
+Algoritmo	A11Par
+Var
+	eNum. eResiduo: entero
+Inicio
+	Escribir (Programa que determina si un número es par)
+	Escribir (“Ingrese un número”)
+	Leer (eNum)
+	Hacer eResiduo = eNum MOD 2
+	Si (eResiduo = 0) entonces
+		Escribir (eNum, “es un número par”)
+	De lo contrario
+		Escribir (eNum, “es un número impar)
+	Fin Si
+Fin // A11Par

@@ -1,0 +1,16 @@
+Algoritmo A15Fibonacci
+Var
+	eFibonacci, eContador, ePenultimo, eUltimo: entero
+Inicio
+	-Escribir(“Este programa te muestra los primeros 20 números de la serie de Fibonacci”)
+	-Escribir(“0, 1, 1”)	
+	-Hacer eContador = 3
+-Hacer ePenultimo = 1
+-Hacer eUltimo = 1
+	-Repetir
+		-Hacer eFibonacci = ePenultimo + eUltimo
+		-Hacer ePenultimo = eUltimo
+		-Hacer eUltimo = eFibonacci
+		-Escribir(“, ”, eFibonacci)
+	-Desde eContador = 3 hasta 20
+Fin//A15Fibonacci

@@ -1,0 +1,38 @@
+Inicio 
+	Variable selector es Numérico entero
+
+	selector = 0
+
+	Escribir "Pograma que recibe un número entero entre 0 y 11, debe devolver el nombre del mes correspondiente."
+	Escribir "Toma en cuenta que 0 = Enero y 11 = Diciembre" 
+	Leer "Ingrese un número: ", selector
+	switch selector)
+		case 0:  Escribir "Enero";   
+				break;  
+		case 1:  Escribir "Febrero";  
+				break;  
+		case 2:  Escribir "Marzo";   
+				break; 
+		case 3:  Escribir "Abril";   
+				break;
+		case 4:  Escribir "Mayo";   
+				break;
+		case 5:  Escribir "Junio";   
+				break;
+		case 6:  Escribir "Julio";   
+				break;
+		case 7:  Escribir "Agosto";   
+				break;
+		case 8:  Escribir "Septiembre";   
+				break;
+		case 9:  Escribir "Octubre";   
+				break; 
+		case 10: Escribir "Noviembre";   
+				break;
+		case 11: Escribir "Diciembre";   
+				break;  
+		default:  Escribir "Opción no válida."; 
+	end-switch
+Fin
+		
+	

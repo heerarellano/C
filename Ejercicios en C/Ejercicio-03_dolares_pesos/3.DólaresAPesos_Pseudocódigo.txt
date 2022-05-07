@@ -1,0 +1,21 @@
+Inicio 
+	Constante PRECIO_DOLAR es Númerico Real
+	Variable peso es Númerico Real 
+	Variable dolar es Numérico Real
+
+	PRECIO_DOLAR = 23.0033
+	dolar = 0
+	peso = 0
+
+	Escribir "Programa que recibe como entrada un monto en dólares (USD) y devuelve la cantidad equivalente en pesos mexicanos (MXN)."
+	Leer "Ingrese un monto en dólares: ", dolar
+	peso <- dolar * PRECIO_DOLAR
+	Escribir "Los dólares que ingresó son: ", dolar
+	Escribir "En pesos mexicanos son: ", peso
+Fin 
+
+
+
+
+
+

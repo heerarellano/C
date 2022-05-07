@@ -1,0 +1,89 @@
+Inicio 
+    Variable ronda es Numérico Entero
+    Variable opcion_usuario es Numérico Entero
+    Variable volado es Numérico Entero
+    Variable bolsa_cpu es Numérico Real
+    Variable bolsa_usuario es Numérico Real
+    Variable apuesta_cpu  es Numérico Real
+    Variable apuesta_usuario es Numérico Real
+
+    ronda = 1
+    opcion_usuario = 0
+    volado = 0
+    bolsa_cpu = 500
+    apuesta_cpu = 500
+    apuesta_usuario = 0
+
+    Escribir "Programa que juegua volados con el usuario, el juego tendrá 3 rondas."
+    Ejecutar srand(time(NULL))
+    for(ronda = 1; ronda <= 3; ronda++)
+    	apuesta_cpu = 20 + rand() % 80 
+    	Escribir"La apuesta de la cpu de la ronda  es de:", apuesta_cpu
+    	Ejecutar validar_apuesta(ronda, apuesta_usuario)
+    	Ejecutar determinar_volado(volado, opcion_usuario)
+    	Ejecutar calcular_resultados(bolsa_usuario, bolsa_cpu, apuesta_usuario, apuesta_cpu, volado, opcion_usuario)
+    end-for
+    Ejecutar determinar_ganador(bolsa_usuario,bolsa_cpu)
+Fin 
+
+float función  validar_apuesta(int ronda, float apuesta_usuario)
+Inicio 
+	do
+		Leer "Ingrese su apuesta: ", apuesta_usuario
+		Si(apuesta_usuario < 20 || apuesta_usuario > 100 ) entonces 
+			Escribir  "Apuesta no válida, debe ingresar una apuesta con un límite entre $20 y $100. "
+		sino
+			Escribir "Tu apuesta de la ronda es: ", apuesta_usuario 
+	while( apuesta_usuario < 20 || apuesta_usuario > 100 )
+	Regresar apuesta_usuario
+Fin
+
+
+int función determinar_volado(int volado, int opcion_usuario)
+Inicio
+	Escribir "0: AGUILA"
+	Escribir "1:SOL"
+	Leer "Eliga una opción: ", opcion_usuario
+	Ejecutar  srand(time(NULL))
+	volado = rand() % 2
+	Si(volado == 0) entonces
+		Escribir "El resulado fue: AGUILA"
+	sino
+		Escribir "El resultado fue: SOL"
+	fin-si
+	Regresar opcion_usuario
+	Regresar_volado
+Fin
+
+	
+float función calcular_resultados(float bolsa_usuario, float bolsa_cpu,float apuesta_usuario, float apuesta_cpu, int volado, int  opcion_usuario)
+Inicio 
+	Si(opcion_usuario == volado) entonces 
+		bolsa_usuario = bolsa_usuario + apuesta_cpu
+		bolsa_cpu = bolsa_cpu - apuesta_cpu  
+		Escribir "Ganaste esta ronda"
+		Escribir "Tu bolsa ahora es de: ", bolsa_usuario
+		Escribir "La bolsa de la cpu es:", bolsa_cpu
+	sino
+		bolsa_cpu = bolsa_cpu + apuesta_usuario
+		bolsa_usuario = bolsa_usuario - apuesta_usuario
+		Escribir "Perdiste esta ronda"
+		Escribir "Tu bolsa ahora es de: ", bolsa_usuario
+		Escribir "La bolsa de la cpu es:", bolsa_cpu
+	fin-si
+	Regresar bolsa_usuario
+	Regresar bolsa_cpu
+Fin
+
+void función  determinar_ganador(float bolsa_usuario, float bolsa_cpu)
+Inicio 
+	Escribir "Ganador"
+	Si(bolsa_cpu > bolsa_usuario) entonces
+		Escribir "cpu"
+	sino
+		Escribir "usuario"
+	fin-si
+	Escribir "Resultados finales"
+	Escribir "Tu bolsa ahora es de: ", bolsa_usuario
+	Escribir "La bolsa de la cpu es:", bolsa_cpu
+Fin	

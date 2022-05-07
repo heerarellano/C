@@ -1,0 +1,13 @@
+Inicio 
+	Variable numero_par es Numérico Entero
+	
+    numero_par = 0
+
+    Escribir "Programa que imprime los números pares del 0 al 100." 
+    Escribir "Los números pares son: "
+    for(numero_par ; numero_par <= 100; numero_par = numero_par + 2  ) 
+    	print numero_par; 
+    end-for
+Fin 
+
+

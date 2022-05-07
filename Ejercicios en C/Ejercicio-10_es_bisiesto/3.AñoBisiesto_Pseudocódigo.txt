@@ -1,0 +1,24 @@
+Inicio 
+	Variable anio es Numérico entero 
+	Variable bandera es Booleano 
+
+	anio = 0 
+	bandera = false
+
+	Escribir "Programa que recibe un número entero que represente un año y devuelva verdadero si el año es bisiesto."
+	Leer "Ingrese un año", anio
+	Ejecutar determinar_bisiesto(anio, bandera)
+	Si(bandera == true) entonces
+		Escribir "Es un año bisiesto", anio
+	sino
+		Escribir "No es un año bisiesto", anio
+	fin-si
+Fin 
+
+bool función determinar_bisiesto(int anio, bool bandera)
+Inicio
+	Si(anio % 4 == 0) entonces
+		bandera = true
+	fin-si
+	Regresar bandera
+Fin

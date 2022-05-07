@@ -1,0 +1,33 @@
+Inicio 
+	Variable numero_aleatorio es Numérico Entero
+	Variable oportunidad es Numérico Entero
+	Variable numero_recibido es Numérico Entero
+
+	numero_aleatorio  = 0
+	oportunidad = 0
+	numero_recibido = 0
+
+	Escribir "Programa en el cual el usuario debe adivinar un número entero entre 1 y 100."
+	Escribir "El número es generado aleatoriamente por el programa."
+	Escribir "El programa solo le dará 5 intentos al usuario para adivinar."
+	Ejecutar srang(time)
+	numero_aleatorio <- 1 + rand(0,100)
+	while(oportunidad < 5)
+		Leer "Ingrese un número: ", numero_recibido
+		Si(numero_recibido == numero_aleatorio) entonces
+			Escribir "GANASTE"
+			Escribir "El número es: ", numero_aleatorio
+			oportunidad <- 6
+		sino 
+			Escribir "Intento fallido", oportunidad + 1
+			oportunidad <- oportunidad + 1
+		fin-si
+	end-while
+	Si(oportunidad == 5 ) entonces
+		Escribir "PERDISTE"
+		Escribir "El número correcto es: ", numero_aleatorio
+	fin-si	
+Fin
+
+
+

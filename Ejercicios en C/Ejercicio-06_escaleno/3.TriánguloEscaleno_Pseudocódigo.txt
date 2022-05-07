@@ -1,0 +1,25 @@
+Inicio 
+	Variable lado1 	es Numérico Real
+	Variable lado2	es Numérico Real
+	Variable lado3	es Numérico Real
+	Variable perimetro	es Numérico Real
+
+	lado1  = 0
+	lado2 = 0
+	lado3 = 0
+	perimetro = 0
+
+	Escribir "Programa que calcula el perímetro de un triángulo escaleno."
+	Leer "Ingrese los centímetros del primer lado: ", lado1
+	Leer "Ingrese los centímetros del segundo lado: ", lado2
+	Leer "Ingrese los centímetros del tercer lado: ", lado3
+	Si (lado1 != lado2 AND lado1 != lado3 ) entonces
+		perimetro <- lado1 + lado2 + lado3
+		Escribir "El perímetro del triángulo escaleno es:  cm", perimetro
+	sino 
+		Escribir "Ingresó lados iguales, por lo que no es un triángulo escaleno, no se puede calcular el perímetro."
+	fin-si
+Fin
+
+
+

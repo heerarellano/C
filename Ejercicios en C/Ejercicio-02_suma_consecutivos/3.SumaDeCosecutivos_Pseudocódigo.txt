@@ -1,0 +1,20 @@
+Inicio
+	Variable  numero_recibido  es Numérico Entero
+	Variable  contador  es Numérico Entero
+	Variable  suma es Numérico Entero
+
+	numero_recibido = 0
+	contador = 0
+	suma = 0
+
+	Escribir "Programa que recibe un número entre 1 y 50,  y devuelve la suma de los números consecutivos del 1 hasta ese número."
+	Leer "Ingrese un número entre 1 y 50:",  numero_recibido
+	Si (numero_recibido >= 1 AND numero_recibido <= 50 ) entonces 
+        for(contador = 1; contador <= numero_recibido; contador++ )
+			suma <- suma + contador
+		end-for
+		Escribir "La suma es:", suma
+	sino
+		Escribir "Número no valido, ingrese un número entre 1 y 50."
+	fin-si
+Fin
